@@ -1,0 +1,230 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: #ccc;
+}
+/*整体框架*/
+.wrap {
+	position: relative;
+	width: 300px;
+	height: 300px;
+	margin: 100px auto;
+	background: #fff;
+	padding:20px ;
+	text-align: center;
+}
+/*头部样式设置*/
+.wrap .header{
+	position: relative;
+	width: 200px;
+	height: 190px;
+	border: 2px solid #000;
+	border-radius: 50%;
+	display: inline-block;
+	box-shadow: 1px 1px 1px #ccc,-1px -1px 1px #ccc;
+	z-index: 10;
+	background: #fff;
+}
+/*眼睛样式设置*/
+.header .eye{
+	position: absolute;
+	width: 100%;
+	height: 40px;
+	top: 50px;
+}
+/*左边眼睛样式设置*/
+.header .eye .left-eye{
+	position: absolute;
+	width: 30px;
+	height: 40px;
+	background: #000;
+	border-radius: 50%;
+	left: 50px;
+	-webkit-animation: left-eye 5s linear .1s infinite;
+}
+/*左眼动画效果*/
+@-webkit-keyframes left-eye{
+	0%{transform: scale(1);}
+	50%{transform: scale(1.5,0.8);}
+	100%{transform: scale(1);}
+}
+/*左眼珠样式设置*/
+.header .eye .left-eye:after{
+	content: "";
+	position: absolute;
+	width: 15px;
+	height: 20px;
+	background: #fff;
+	border-radius: 50%;
+	top: 10px;
+	right: 5px;
+}
+/*右边眼睛样式设置*/
+.header .eye .right-eye{
+	position: absolute;
+	width: 30px;
+	height: 40px;
+	background: #000;
+	border-radius: 50%;
+	right: 50px;
+	-webkit-animation: right-eye 5s linear .1s infinite;
+}
+/*右眼动画效果*/
+@-webkit-keyframes right-eye{
+	0%{transform: scale(1);}
+	50%{transform: scale(1.5,0.8);}
+	100%{transform: scale(1);}
+}
+/*右眼珠样式设置*/
+.header .eye .right-eye:after{
+	content: "";
+	position: absolute;
+	width: 15px;
+	height: 20px;
+	background: #fff;
+	border-radius: 50%;
+	top: 10px;
+	right: 9px;
+}
+/*脸颊样式设置*/
+.header .face{
+	position: absolute;
+	width: 100%;
+	height: 15px;
+	top: 90px;
+}
+/*左边脸颊样式设置*/
+.header .face .left-face{
+	position: absolute;
+	width: 30px;
+	height: 15px;
+	background: #aaa;
+	border-radius: 50%;
+	top: 0;
+	left: 30px;
+	-webkit-animation: left-face 5s linear .1s infinite;
+}
+/*左边脸颊动画效果*/
+@-webkit-keyframes left-face{
+	0%{transform: translateX(0);}
+	50%{transform: translateX(-5px);}
+	100%{transform: translateX(0);}
+}
+/*右边脸颊样式设置*/
+.header .face .right-face{
+	position: absolute;
+	width: 30px;
+	height: 15px;
+	background: #aaa;
+	border-radius: 50%;
+	top: 0;
+	right: 30px;
+	-webkit-animation: right-face 5s linear .1s infinite;
+}
+
+/*右边脸颊动画效果*/
+@-webkit-keyframes right-face{
+	0%{transform: translateX(0);}
+	50%{transform: translateX(5px);}
+	100%{transform: translateX(0);}
+}
+/*嘴巴样式设置*/
+.header .mouth{
+	position: absolute;
+	width: 40px;
+	height: 20px;
+	border: 4px solid #000;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 80px;
+	border-bottom-right-radius: 80px;
+	top: 100px;
+	left: 76px;
+	border-top-color: transparent;/*表示隐藏上边框的*/
+	border-left-color: transparent;
+	border-right-color: transparent; 
+	-webkit-animation: mouth 5s linear .1s infinite;
+}
+
+@-webkit-keyframes mouth{
+	0%{transform: scaleX(1);}
+	50%{transform: scaleX(1.5);}
+	100%{transform: scaleX(1);}
+}
+/*脚部样式设置*/
+.wrap .foot{
+	position: absolute;
+	width: 280px;
+	height: 80px;
+	/*background: yellow;*/
+	left: 30px;
+	top: 180px;
+}
+
+.wrap .foot .left-foot1{
+	position: absolute;
+	width: 80px;
+	height: 50px;
+	border: 2px solid #000;
+	border-top-left-radius: 60px;
+	border-top-right-radius: 0px;
+	border-bottom-left-radius: 60px;
+	border-bottom-right-radius: 100px;
+	transform: rotate(-10deg);
+}
+
+.wrap .foot .right-foot1{
+	position: absolute;
+	width: 80px;
+	height: 50px;
+	border: 2px solid #000;
+	border-top-left-radius: 60px;
+	border-top-right-radius: 0px;
+	border-bottom-left-radius: 60px;
+	border-bottom-right-radius: 100px;
+	transform: rotate(-10deg);
+	margin-left: 10px;
+	right: 0;
+	transform: rotateY(180deg);
+}
+
+.wrap .foot .left-foot2{
+	position: absolute;
+	width: 80px;
+	height: 50px;
+	border: 2px solid #000;
+	border-top-left-radius: 60px;
+	border-top-right-radius: 0px;
+	border-bottom-left-radius: 60px;
+	border-bottom-right-radius: 100px;
+	transform: translate(50px,30px) rotate(-30deg);
+}
+
+.wrap .foot .right-foot2{
+	position: absolute;
+	width: 80px;
+	height: 50px;
+	border: 2px solid #000;
+	border-top-left-radius: 60px;
+	border-top-right-radius: 0px;
+	border-bottom-left-radius: 60px;
+	border-bottom-right-radius: 100px;
+	right: 0;
+	transform: translate(-50px,30px) rotate(30deg) rotateY(180deg);
+}
+
+.wrap .foot .middle-foot{
+	position: absolute;
+	width: 30px;
+	height: 100px;
+	border: 2px solid #000;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 60px;
+	border-bottom-right-radius: 60px;
+	left: 123px;
+	top: 15px;
+}
